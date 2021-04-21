@@ -12,6 +12,9 @@ module.exports = {
         md: {min: "600px", max: "1224px"},
         xl: "1224px",
       },
+      gridTemplateRows: {
+        layout: "auto 1fr auto",
+      },
     },
   },
   variants: {

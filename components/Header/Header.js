@@ -3,7 +3,9 @@ import {
   InitWidth,
 } from "./../../Hooks/helperFn";
 import Aside from "./../SideBar/Sidebar";
+import CartItem from "./../CartItem/CartItem";
 import {useState} from "react";
+
 import {
   MenuIcon,
   SearchIcon,
@@ -17,7 +19,7 @@ export default function HeaderComp() {
     setAside((p) => !p);
   }
   return (
-    <header className='flex items-start w-full row-span-1 xl:col-start-2 xl:col-end-10 md:col-span-2 sm:h-2/5 bg-gray-50 '>
+    <header className='flex items-start w-full xl:col-start-2 xl:col-end-10 md:col-span-2 sm:h-[75px] row-start-1 row-end-2 bg-gray-50 '>
       <Aside
         openAside={openAside}
         closeAside={openSidebar}
@@ -36,9 +38,11 @@ export default function HeaderComp() {
           className='m-auto h-full'
         />
       </div>
-      <div className='flex h-full w-1/5  '>
+      <CartItem />
+      {/* <div className='flex h-full w-1/5  '>
         <ShoppingBagIcon className='h-3/5 m-auto' />
-      </div>
+      </div> */}
     </header>
   );
 }
+// flex items-start w-full xl:col-start-2 xl:col-end-10 md:col-span-2 sm:h-2/5 bg-gray-50
